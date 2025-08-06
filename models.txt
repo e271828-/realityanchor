@@ -1,1 +1,1 @@
-xbai-o4
+qwen3-30b-a3b-instruct-2507-mlx

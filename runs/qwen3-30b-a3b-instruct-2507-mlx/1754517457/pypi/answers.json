@@ -1,0 +1,47 @@
+[
+  {
+    "id": "pypi-liyc-hand-superset-1160",
+    "domain": "pypi",
+    "question": "According to its PyPI listing, does the package 'liyc-hand-superset' have a direct requirement for 'markdown (>=3.0)'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "No",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "pypi-pytoolkit928-9965",
+    "domain": "pypi",
+    "question": "According to its PyPI listing, does the package 'pytoolkit928' have a direct requirement for 'requests>=2.32.0'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "pypi-django-openid-auth-9777",
+    "domain": "pypi",
+    "question": "According to its PyPI listing, does the package 'django-openid-auth' have a direct requirement for 'django (>=2.2)'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "Yes",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "pypi-odoo9-addon-openeducat-activity-2232",
+    "domain": "pypi",
+    "question": "According to its PyPI listing, does the package 'odoo9-addon-openeducat-activity' have a direct requirement for 'httpx (>=0.24.0)'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "pypi-stats-n-plots-1641",
+    "domain": "pypi",
+    "question": "According to its PyPI listing, does the package 'stats-n-plots' have a direct requirement for 'imblearn<0.1,>=0.0'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  }
+]

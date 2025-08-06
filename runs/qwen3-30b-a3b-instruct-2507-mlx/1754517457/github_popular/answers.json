@@ -1,0 +1,47 @@
+[
+  {
+    "id": "github_popular-93444615-6397",
+    "domain": "github_popular",
+    "question": "In the popular GitHub repository 'hashicorp/terraform-provider-aws', what is the value of the variable named `prefix` found in the file at https://github.com/hashicorp/terraform-provider-aws/blob/main/website/docs/r/verifiedaccess_instance_logging_configuration.html.markdown?",
+    "expected_answer": "example",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github_popular-21233191-4100",
+    "domain": "github_popular",
+    "question": "In the popular GitHub repository 'ipfs/kubo', what is the value of the variable named `IPFS_PATH` found in the file at https://github.com/ipfs/kubo/blob/master/misc/systemd/ipfs.service?",
+    "expected_answer": "${HOME}",
+    "llm_response": "$IPFS_PATH",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github_popular-1007222028-5653",
+    "domain": "github_popular",
+    "question": "In the popular GitHub repository 'openai/gpt-oss', what is the value of the variable named `tool_name` found in the file at https://github.com/openai/gpt-oss/blob/main/gpt_oss/chat.py?",
+    "expected_answer": "Search",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github_popular-820145382-8566",
+    "domain": "github_popular",
+    "question": "In the popular GitHub repository 'meta-llama/llama-stack', what is the value of the variable named `action` found in the file at https://github.com/meta-llama/llama-stack/blob/main/llama_stack/cli/stack/remove.py?",
+    "expected_answer": "store_true",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github_popular-942837343-6300",
+    "domain": "github_popular",
+    "question": "In the popular GitHub repository 'eyaltoledano/claude-task-master', what is the value of the variable named `description` found in the file at https://github.com/eyaltoledano/claude-task-master/blob/main/mcp-server/src/tools/move-task.js?",
+    "expected_answer": "Move a task or subtask to a new position",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  }
+]

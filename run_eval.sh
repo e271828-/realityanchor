@@ -29,7 +29,7 @@ echo "--------------------------------"
 # This only runs once, creating a consistent set of questions for all models.
 echo ""
 echo ">>> Step 1: Generating benchmark data..."
-python main.py generate --domains github,reddit,pypi,wikipedia --count $COUNT_PER_DOMAIN
+python main.py generate --domains github,github_popular,reddit,pypi,wikipedia --count $COUNT_PER_DOMAIN
 
 # Step 2: Find all generated benchmark files and create a comma-separated list
 echo ""

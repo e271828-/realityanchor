@@ -1,6 +1,7 @@
 # generators/reddit.py
 
 import os
+import gzip
 import random
 import re
 import time
@@ -19,7 +20,7 @@ FALLBACK_STOP_WORDS = set([
     'thanks', 'welcome', 'companion', 'bosnian'
 ])
 COMMON_WORDS_URL = "https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt"
-COMMON_WORDS_CACHE_PATH = "common_english_words.txt"
+COMMON_WORDS_CACHE_PATH = "common_english_words.txt.gz"
 
 # --- Helper Functions ---
 
@@ -28,7 +29,7 @@ def load_common_words(console):
     Loads a large set of common English words, caching it locally.
     """
     if os.path.exists(COMMON_WORDS_CACHE_PATH):
-        with open(COMMON_WORDS_CACHE_PATH, 'r') as f:
+        with gzip.open(COMMON_WORDS_CACHE_PATH, 'r') as f:
             return set(line.strip().lower() for line in f)
 
     try:

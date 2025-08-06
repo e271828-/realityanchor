@@ -1,0 +1,38 @@
+[
+  {
+    "id": "github-337633686-4077",
+    "domain": "github",
+    "question": "In the GitHub file at https://github.com/automation555/blog/blob/master/app/controllers/home_controller.rb, what is the value of the variable named `page_title`?",
+    "expected_answer": "My blog",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github-28887-4173",
+    "domain": "github",
+    "question": "In the GitHub file at https://github.com/jacobeus/translatable_fields/blob/master/Rakefile, what is the value of the variable named `title`?",
+    "expected_answer": "TranslatableFields",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github-728510-4780",
+    "domain": "github",
+    "question": "In the GitHub file at https://github.com/codelurker/bfirc/blob/master/bfircinit.py, what is the value of the variable named `MAIN_WINDOW_NAME`?",
+    "expected_answer": "(server)",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "github-32629-5209",
+    "domain": "github",
+    "question": "In the GitHub file at https://github.com/netcarver/sed_plugin_list/blob/master/sed_plugin_list.php, what is the value of the variable named `href`?",
+    "expected_answer": "'.$plugin['author_uri'].'",
+    "llm_response": "Unknown",
+    "is_correct": false,
+    "error": null
+  }
+]

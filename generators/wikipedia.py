@@ -1,6 +1,7 @@
 # generators/wikipedia.py
 
 import os
+import gzip
 import random
 import re
 import time
@@ -10,7 +11,7 @@ from datetime import datetime
 # --- Constants ---
 DOMAIN_NAME = "wikipedia"
 WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php"
-COMMON_WORDS_CACHE_PATH = "common_english_words.txt" # Assumes it's downloaded by the Reddit generator
+COMMON_WORDS_CACHE_PATH = "common_english_words.txt.gz" # Assumes it's downloaded by the Reddit generator
 
 # --- Helper Functions ---
 
@@ -20,7 +21,7 @@ def load_common_words(console):
     Assumes the Reddit generator has already downloaded it.
     """
     if os.path.exists(COMMON_WORDS_CACHE_PATH):
-        with open(COMMON_WORDS_CACHE_PATH, 'r') as f:
+        with gzip.open(COMMON_WORDS_CACHE_PATH, 'r') as f:
             return set(line.strip().lower() for line in f)
     else:
         console.log(f"[yellow]Warning: '{COMMON_WORDS_CACHE_PATH}' not found. Run the Reddit generator first to download it.[/yellow]")

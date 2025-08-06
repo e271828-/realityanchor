@@ -1,0 +1,47 @@
+[
+  {
+    "id": "reddit-n76hn5s-7034",
+    "domain": "reddit",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/VintageApple/comments/1mip1la/would_you_want_a_website_that_lets_you_view_every/n76hn5s/ contain the word 'version'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "Yes",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "reddit-n6u8qwd-3656",
+    "domain": "reddit",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/VintageStory/comments/1mh89tr/downloading_vintagestory/n6u8qwd/ contain the word '_products'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "reddit-n6o3eji-8557",
+    "domain": "reddit",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/telescopes/comments/1mgf5nj/why_ive_been_a_bit_crabby_when_told_you_need/n6o3eji/ contain the word 'gamehistory'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "reddit-n72fklv-1247",
+    "domain": "reddit",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/mac/comments/1mibxaj/what_is_the_best_starter_mac_for_a_beginner_in/n72fklv/ contain the word 'setting'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "reddit-n6xvwgr-9346",
+    "domain": "reddit",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/retrogaming/comments/1mhl26y/is_this_something_special/n6xvwgr/ contain the word 'ignoring'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "No",
+    "is_correct": false,
+    "error": null
+  }
+]

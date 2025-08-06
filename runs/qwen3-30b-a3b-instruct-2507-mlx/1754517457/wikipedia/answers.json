@@ -1,0 +1,47 @@
+[
+  {
+    "id": "wikipedia-Adjustable_spanner-2007",
+    "domain": "wikipedia",
+    "question": "Does the first sentence of the English Wikipedia article for 'Adjustable spanner' contain the word 'anglophone'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "No",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "wikipedia-Photo-crayotype-1700",
+    "domain": "wikipedia",
+    "question": "Does the first sentence of the English Wikipedia article for 'Photo-crayotype' contain the word 'collotypes'? Answer Yes or No.",
+    "expected_answer": "Yes",
+    "llm_response": "No",
+    "is_correct": false,
+    "error": null
+  },
+  {
+    "id": "wikipedia-Adjustable_spanner-7703",
+    "domain": "wikipedia",
+    "question": "Does the first sentence of the English Wikipedia article for 'Adjustable spanner' contain the word 'chromatypes'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "wikipedia-Patent_fuel-1974",
+    "domain": "wikipedia",
+    "question": "Does the first sentence of the English Wikipedia article for 'Patent fuel' contain the word 'chromatypes'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  },
+  {
+    "id": "wikipedia-Pizza_cutter-1078",
+    "domain": "wikipedia",
+    "question": "Does the first sentence of the English Wikipedia article for 'Pizza cutter' contain the word 'cardiff'? Answer Yes or No.",
+    "expected_answer": "No",
+    "llm_response": "No",
+    "is_correct": true,
+    "error": null
+  }
+]

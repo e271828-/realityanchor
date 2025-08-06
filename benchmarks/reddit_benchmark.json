@@ -1,20 +1,104 @@
 [
   {
-    "id": "reddit-n79nwpz-9608",
+    "id": "reddit-n76hn5s-7034",
     "domain": "reddit",
-    "source_url": "https://www.reddit.com/r/fountainpens/comments/1mja8rn/which_paper_do_you_recommend_thats_accessible_in/n79nwpz/",
-    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/fountainpens/comments/1mja8rn/which_paper_do_you_recommend_thats_accessible_in/n79nwpz/ contain the word 'maruman'? Answer Yes or No.",
+    "source_url": "https://www.reddit.com/r/VintageApple/comments/1mip1la/would_you_want_a_website_that_lets_you_view_every/n76hn5s/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/VintageApple/comments/1mip1la/would_you_want_a_website_that_lets_you_view_every/n76hn5s/ contain the word 'version'? Answer Yes or No.",
     "answer": "Yes",
     "eval_method": "string_match",
     "generation_metadata": {
-      "topic": "fountain pens",
-      "subreddit": "fountainpens",
+      "topic": "vintage computing",
+      "subreddit": "VintageApple",
       "question_type": "Yes",
-      "keyword_tested": "maruman",
-      "created_utc": "2025-08-06T17:33:40Z",
+      "keyword_tested": "version",
+      "created_utc": "2025-08-06T05:09:24Z",
       "verification_details": {
         "is_unique": true,
-        "search_query_used": "\"\"maruman\" \"fountain pens\"\"",
+        "search_query_used": "\"\"version\" \"vintage computing\"\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "reddit-n6u8qwd-3656",
+    "domain": "reddit",
+    "source_url": "https://www.reddit.com/r/VintageStory/comments/1mh89tr/downloading_vintagestory/n6u8qwd/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/VintageStory/comments/1mh89tr/downloading_vintagestory/n6u8qwd/ contain the word '_products'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "topic": "vintage computing",
+      "subreddit": "VintageStory",
+      "question_type": "No",
+      "keyword_tested": "_products",
+      "created_utc": "2025-08-04T09:02:52Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"\"_products\" \"vintage computing\"\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "reddit-n6o3eji-8557",
+    "domain": "reddit",
+    "source_url": "https://www.reddit.com/r/telescopes/comments/1mgf5nj/why_ive_been_a_bit_crabby_when_told_you_need/n6o3eji/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/telescopes/comments/1mgf5nj/why_ive_been_a_bit_crabby_when_told_you_need/n6o3eji/ contain the word 'gamehistory'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "topic": "vintage computing",
+      "subreddit": "telescopes",
+      "question_type": "No",
+      "keyword_tested": "gamehistory",
+      "created_utc": "2025-08-03T09:41:21Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"\"gamehistory\" \"vintage computing\"\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "reddit-n72fklv-1247",
+    "domain": "reddit",
+    "source_url": "https://www.reddit.com/r/mac/comments/1mibxaj/what_is_the_best_starter_mac_for_a_beginner_in/n72fklv/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/mac/comments/1mibxaj/what_is_the_best_starter_mac_for_a_beginner_in/n72fklv/ contain the word 'setting'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "topic": "vintage computing",
+      "subreddit": "mac",
+      "question_type": "No",
+      "keyword_tested": "setting",
+      "created_utc": "2025-08-05T15:21:02Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"\"setting\" \"vintage computing\"\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "reddit-n6xvwgr-9346",
+    "domain": "reddit",
+    "source_url": "https://www.reddit.com/r/retrogaming/comments/1mhl26y/is_this_something_special/n6xvwgr/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/retrogaming/comments/1mhl26y/is_this_something_special/n6xvwgr/ contain the word 'ignoring'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "topic": "vintage computing",
+      "subreddit": "retrogaming",
+      "question_type": "Yes",
+      "keyword_tested": "ignoring",
+      "created_utc": "2025-08-04T21:07:21Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"\"ignoring\" \"vintage computing\"\"",
         "search_result_count": 0,
         "reason": "Skipped due to missing API key."
       }
