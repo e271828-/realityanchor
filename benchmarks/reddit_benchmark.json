@@ -1,0 +1,23 @@
+[
+  {
+    "id": "reddit-n79nwpz-9608",
+    "domain": "reddit",
+    "source_url": "https://www.reddit.com/r/fountainpens/comments/1mja8rn/which_paper_do_you_recommend_thats_accessible_in/n79nwpz/",
+    "question": "Does the Reddit comment at the URL https://www.reddit.com/r/fountainpens/comments/1mja8rn/which_paper_do_you_recommend_thats_accessible_in/n79nwpz/ contain the word 'maruman'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "topic": "fountain pens",
+      "subreddit": "fountainpens",
+      "question_type": "Yes",
+      "keyword_tested": "maruman",
+      "created_utc": "2025-08-06T17:33:40Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"\"maruman\" \"fountain pens\"\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  }
+]

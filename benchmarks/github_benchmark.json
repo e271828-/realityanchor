@@ -1,0 +1,86 @@
+[
+  {
+    "id": "github-337633686-4077",
+    "domain": "github",
+    "source_url": "https://github.com/automation555/blog/blob/master/app/controllers/home_controller.rb",
+    "question": "In the GitHub file at https://github.com/automation555/blog/blob/master/app/controllers/home_controller.rb, what is the value of the variable named `page_title`?",
+    "answer": "My blog",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "repo_name": "automation555/blog",
+      "file_path": "app/controllers/home_controller.rb",
+      "variable_name": "page_title",
+      "stars": 0,
+      "pushed_at": "2008-04-05T03:38:15Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"My blog\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "github-28887-4173",
+    "domain": "github",
+    "source_url": "https://github.com/jacobeus/translatable_fields/blob/master/Rakefile",
+    "question": "In the GitHub file at https://github.com/jacobeus/translatable_fields/blob/master/Rakefile, what is the value of the variable named `title`?",
+    "answer": "TranslatableFields",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "repo_name": "jacobeus/translatable_fields",
+      "file_path": "Rakefile",
+      "variable_name": "title",
+      "stars": 1,
+      "pushed_at": "2008-06-26T10:41:07Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"TranslatableFields\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "github-728510-4780",
+    "domain": "github",
+    "source_url": "https://github.com/codelurker/bfirc/blob/master/bfircinit.py",
+    "question": "In the GitHub file at https://github.com/codelurker/bfirc/blob/master/bfircinit.py, what is the value of the variable named `MAIN_WINDOW_NAME`?",
+    "answer": "(server)",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "repo_name": "codelurker/bfirc",
+      "file_path": "bfircinit.py",
+      "variable_name": "MAIN_WINDOW_NAME",
+      "stars": 1,
+      "pushed_at": "2008-08-17T14:08:56Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"(server)\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  },
+  {
+    "id": "github-32629-5209",
+    "domain": "github",
+    "source_url": "https://github.com/netcarver/sed_plugin_list/blob/master/sed_plugin_list.php",
+    "question": "In the GitHub file at https://github.com/netcarver/sed_plugin_list/blob/master/sed_plugin_list.php, what is the value of the variable named `href`?",
+    "answer": "'.$plugin['author_uri'].'",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "repo_name": "netcarver/sed_plugin_list",
+      "file_path": "sed_plugin_list.php",
+      "variable_name": "href",
+      "stars": 1,
+      "pushed_at": "2008-07-09T14:25:31Z",
+      "verification_details": {
+        "is_unique": true,
+        "search_query_used": "\"'.$plugin['author_uri'].'\"",
+        "search_result_count": 0,
+        "reason": "Skipped due to missing API key."
+      }
+    }
+  }
+]

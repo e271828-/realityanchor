@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wikipedia-Adjustable_spanner-2007",
+    "domain": "wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Adjustable_spanner",
+    "question": "Does the first sentence of the English Wikipedia article for 'Adjustable spanner' contain the word 'anglophone'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "article_title": "Adjustable spanner",
+      "question_type": "Yes",
+      "word_tested": "anglophone",
+      "last_modified_utc": "2025-03-28T21:17:13Z"
+    }
+  },
+  {
+    "id": "wikipedia-Photo-crayotype-1700",
+    "domain": "wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Photo-crayotype",
+    "question": "Does the first sentence of the English Wikipedia article for 'Photo-crayotype' contain the word 'collotypes'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "article_title": "Photo-crayotype",
+      "question_type": "Yes",
+      "word_tested": "collotypes",
+      "last_modified_utc": "2024-12-12T04:45:35Z"
+    }
+  },
+  {
+    "id": "wikipedia-Adjustable_spanner-7703",
+    "domain": "wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Adjustable_spanner",
+    "question": "Does the first sentence of the English Wikipedia article for 'Adjustable spanner' contain the word 'chromatypes'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "article_title": "Adjustable spanner",
+      "question_type": "No",
+      "word_tested": "chromatypes",
+      "last_modified_utc": "2025-03-28T21:17:13Z"
+    }
+  },
+  {
+    "id": "wikipedia-Patent_fuel-1974",
+    "domain": "wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Patent_fuel",
+    "question": "Does the first sentence of the English Wikipedia article for 'Patent fuel' contain the word 'chromatypes'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "article_title": "Patent fuel",
+      "question_type": "No",
+      "word_tested": "chromatypes",
+      "last_modified_utc": "2025-08-02T20:04:24Z"
+    }
+  },
+  {
+    "id": "wikipedia-Pizza_cutter-1078",
+    "domain": "wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Pizza_cutter",
+    "question": "Does the first sentence of the English Wikipedia article for 'Pizza cutter' contain the word 'cardiff'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "article_title": "Pizza cutter",
+      "question_type": "No",
+      "word_tested": "cardiff",
+      "last_modified_utc": "2025-05-29T22:38:24Z"
+    }
+  }
+]

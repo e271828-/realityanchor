@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pypi-liyc-hand-superset-1160",
+    "domain": "pypi",
+    "source_url": "https://pypi.org/project/liyc-hand-superset/",
+    "question": "According to its PyPI listing, does the package 'liyc-hand-superset' have a direct requirement for 'markdown (>=3.0)'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "package_name": "liyc-hand-superset",
+      "question_type": "Yes",
+      "requirement_tested": "markdown (>=3.0)",
+      "created_utc": "2019-08-11T12:35:05.621353Z"
+    }
+  },
+  {
+    "id": "pypi-pytoolkit928-9965",
+    "domain": "pypi",
+    "source_url": "https://pypi.org/project/pytoolkit928/",
+    "question": "According to its PyPI listing, does the package 'pytoolkit928' have a direct requirement for 'requests>=2.32.0'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "package_name": "pytoolkit928",
+      "question_type": "Yes",
+      "requirement_tested": "requests>=2.32.0",
+      "created_utc": "2023-10-02T19:44:01.860536Z"
+    }
+  },
+  {
+    "id": "pypi-django-openid-auth-9777",
+    "domain": "pypi",
+    "source_url": "https://pypi.org/project/django-openid-auth/",
+    "question": "According to its PyPI listing, does the package 'django-openid-auth' have a direct requirement for 'django (>=2.2)'? Answer Yes or No.",
+    "answer": "Yes",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "package_name": "django-openid-auth",
+      "question_type": "Yes",
+      "requirement_tested": "django (>=2.2)",
+      "created_utc": "2009-04-15T06:47:45.785512Z"
+    }
+  },
+  {
+    "id": "pypi-odoo9-addon-openeducat-activity-2232",
+    "domain": "pypi",
+    "source_url": "https://pypi.org/project/odoo9-addon-openeducat-activity/",
+    "question": "According to its PyPI listing, does the package 'odoo9-addon-openeducat-activity' have a direct requirement for 'httpx (>=0.24.0)'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "package_name": "odoo9-addon-openeducat-activity",
+      "question_type": "No",
+      "requirement_tested": "httpx (>=0.24.0)",
+      "created_utc": "2017-04-11T19:43:55.969554Z"
+    }
+  },
+  {
+    "id": "pypi-stats-n-plots-1641",
+    "domain": "pypi",
+    "source_url": "https://pypi.org/project/stats-n-plots/",
+    "question": "According to its PyPI listing, does the package 'stats-n-plots' have a direct requirement for 'imblearn<0.1,>=0.0'? Answer Yes or No.",
+    "answer": "No",
+    "eval_method": "string_match",
+    "generation_metadata": {
+      "package_name": "stats-n-plots",
+      "question_type": "No",
+      "requirement_tested": "imblearn<0.1,>=0.0",
+      "created_utc": "2022-10-26T10:57:46.321206Z"
+    }
+  }
+]
