@@ -23,18 +23,51 @@ In principle, this provides a means to:
 
 - Investigate training data composition: The presence or absence of these anchors can provide clues about the diversity and nature of a model's pre-training corpus.
 
+### Brief note on "Why Language Models Hallucinate" (Kalai et al 2025) and how we apply it
+
+The paper argues that binary 0-1 grading rewards guessing and thus perpetuates hallucinations. Models that always guess outperform models that honestly abstain under standard accuracy. The fix they recommend is that benchmarks should score by giving credit for uncertainty and penalizing wrong answers, optionally with an explicit confidence target t that implies a penalty of t/(1−t) for incorrect responses.
+
+Reality Anchor adopts this principle in the evaluation harness:
+
+- Evals are tri-state: correct, unknown/IDK, incorrect.
+- Scoring gives partial credit for Unknown and applies a penalty for incorrect answers.
+- Optionally, you can set a "confidence target" t. The harness then uses the paper's penalty t/(1−t), making abstention optimal below that confidence.
+
+This aligns the benchmark with truthful behavior and reduces incentives to bluff.
+
 
 ## Methodology
 
-The benchmark operates on a simple but powerful principle: find facts that are hard to guess and easy to verify.
+The benchmark uses a simple idea: find facts that are hard to guess and easy to verify.
 
 It consists of two main components:
 
-1. Generators: modules that scour locate obscure information. Each generator targets a specific domain and employs heuristics to find verifiable "facts" that are unlikely to be present in a generalized dataset.
+1. Generators: modules that locate obscure information. Each generator targets a specific domain and employs heuristics to find verifiable facts unlikely to be present in a generalized dataset.
 
 2. Eval harness: uses the generated data to create question-answer pairs. It then queries one or more LLMs via an API and evaluates their responses against ground truth.
 
 The current generators create questions that are verifiable via simple string matching to minimize ambiguity and the need for unstable 'llm-as-judge' evals.
+
+### Hallucination-aware scoring
+
+The system prompt tells models to prefer "Unknown" when not confident, and for yes/no tasks to answer exactly "Yes", "No", or "Unknown".
+
+Responses are classified as:
+
+  - correct: matches expected answer (for yes/no or string-inclusion cases),
+  - unknown: contains abstention phrases (e.g. "Unknown", "I don't know", "Not sure", etc.),
+  - incorrect: otherwise.
+
+Each item receives a scalar score:
+
+  - correct = +1.0
+  - unknown = +unknown_credit (default 0.25)
+  - incorrect = −wrong_penalty (default 1.0)
+
+Confidence-target mode: set --risk-threshold t in [0,1). The harness applies wrong_penalty = t/(1−t), mirroring the paper's suggested scheme where abstaining is optimal unless the model's confidence exceeds t.
+
+The overall report includes both traditional accuracy and the Kalai-style average score, so you can see how models trade off guessing vs. truthfulness.
+
 
 ---
 
@@ -51,8 +84,13 @@ Generators:
 
 Eval + reporting:
  - A CLI for generating benchmarks, evaluating models, and re-generating reports from past runs.
- - Support for any OpenAI-compatible API endpoint (e.g., LM Studio, Ollama).
+ - Support for any OpenAI-compatible API endpoint (e.g. LM Studio, Ollama).
  - Automatic, structured logging of all evaluation runs for reproducibility (`runs/<model_name>/<timestamp>/...`).
+ - hallucination-aware scoring that partially credits abstentions and penalizes wrong answers.
+ - optional confidence-target mode (--risk-threshold t) that uses penalty t/(1−t).
+ - tri-state classification (correct/unknown/incorrect) per item, saved to answers.json.
+ - summary table columns for Unknown count and AvgScore; per-run meta.json records scoring parameters.
+ - Backwards compatible: is_correct is still logged for downstream tools that expect it.
 
 ---
 
@@ -84,54 +122,8 @@ Models to test:
 
 To evaluate multiple models in a single run, create a `models.txt` file and list one model identifier per line:
 
-    ```bash
-    cat > models.txt <<EOF
-    qwen3-30b-a3b-instruct-2507-mlx
-    xbai-o4
-    EOF
-    ```
-
-### Running the benchmark
-
-The primary way to run the benchmark is with the provided bash script. Ensure your local LLM server (e.g., LM Studio) is running.
-
-Run evaluation for all models in `models.txt`:
-
-    ./run_eval.sh
-
-Run evaluation for a single, specific model:
-
-    ./run_eval.sh "specific-model-name"
-
-By default, the script will not regenerate benchmark files that already exist. Use the `--force` or `-f` flag to override this.
-
-Force regeneration of all benchmark data:
-
-    ./run_eval.sh --force
-
-### Generating reports from past runs
-
-You can regenerate the summary table from any previous run without re-running the expensive API calls.
-
-1.  Find the run directory you want to report on inside the `runs/` folder.
-2.  Run the `report` command:
-
-    python main.py report --run-dir "runs/Llama-3-8B-Instruct-GGUF/1722981600"
-
----
-
-## Limitations
-
-The main limitation is in using yes/no questions at all. This has very low cardinality, so models will guess and thus some % will always be correct.
-
-The rare string questions as in github are much more robust, and should have a 0% FP rate.
-
----
-
-## Future work
-
-- Add new generators for data sources with time-stamped, obscure facts: arXiv, Stack Overflow, public mailing lists, historical Usenet archives.
-
-- Temporal filtering: Add a `--year` flag to the `generate` and `evaluate` commands to explicitly test knowledge cutoffs.
-
-- Efficiency: current benchmark can run and build itself pretty fast, but some generators can be optimized further.
+```bash
+cat > models.txt <<EOF
+qwen3-30b-a3b-instruct-2507-mlx
+xbai-o4
+EOF
