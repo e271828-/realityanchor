@@ -15,25 +15,13 @@ Models trained exclusively on synthetic or heavily sanitized data may excel at s
 
 In principle, this provides a means to:
 
-- Rank models by real world knowledge: This kind of dynamic benchmark is hard to cheat. If relative scores on Reality Anchor diverge from benchmarks, it would not be surprising if that strongly correlates to models being better or worse at understanding real world user queries.
+- Rank models by real world knowledge: this kind of dynamic benchmark is hard to cheat. If relative scores on Reality Anchor diverge from benchmarks, it would not be surprising if that strongly correlates to models being better or worse at understanding real world user queries.
 
-- Analyze knowledge cutoffs: By generating data from specific time periods, one can probe the temporal boundaries of a model's knowledge and figure out training sample depth; is it well-distributed, or concentrated on more recent documents?
+- Analyze knowledge cutoffs: by generating data from specific time periods, one can probe the temporal boundaries of a model's knowledge and figure out training sample depth; is it well-distributed, or concentrated on more recent documents?
 
-- Compare model grounding: Evaluate how different models perform on retrieval of obscure, real-world information.
+- Compare model grounding: evaluate how different models perform on retrieval of obscure, real-world information.
 
-- Investigate training data composition: The presence or absence of these anchors can provide clues about the diversity and nature of a model's pre-training corpus.
-
-### Brief note on "Why Language Models Hallucinate" (Kalai et al 2025) and how we apply it
-
-The paper argues that binary 0-1 grading rewards guessing and thus perpetuates hallucinations. Models that always guess outperform models that honestly abstain under standard accuracy. The fix they recommend is that benchmarks should score by giving credit for uncertainty and penalizing wrong answers, optionally with an explicit confidence target t that implies a penalty of t/(1−t) for incorrect responses.
-
-Reality Anchor adopts this principle in the evaluation harness:
-
-- Evals are tri-state: correct, unknown/IDK, incorrect.
-- Scoring gives partial credit for Unknown and applies a penalty for incorrect answers.
-- Optionally, you can set a "confidence target" t. The harness then uses the paper's penalty t/(1−t), making abstention optimal below that confidence.
-
-This aligns the benchmark with truthful behavior and reduces incentives to bluff.
+- Investigate training data composition: the presence or absence of these anchors can provide clues about the diversity and nature of a model's pre-training corpus.
 
 
 ## Methodology
@@ -69,7 +57,18 @@ Confidence-target mode: set --risk-threshold t in [0,1). The harness applies wro
 The overall report includes both traditional accuracy and the Kalai-style average score, so you can see how models trade off guessing vs. truthfulness.
 
 
----
+### A brief note on "Why Language Models Hallucinate" (Kalai et al 2025) and how we apply it
+
+The paper argues that binary 0-1 grading rewards guessing and thus perpetuates hallucinations. Models that always guess outperform models that honestly abstain under standard accuracy. The fix they recommend is that benchmarks should score by giving credit for uncertainty and penalizing wrong answers, optionally with an explicit confidence target t that implies a penalty of t/(1−t) for incorrect responses.
+
+Reality Anchor adopts this principle in the evaluation harness:
+
+- Evals are tri-state: correct, unknown/IDK, incorrect.
+- Scoring gives partial credit for Unknown and applies a penalty for incorrect answers.
+- Optionally, you can set a "confidence target" t. The harness then uses the paper's penalty t/(1−t), making abstention optimal below that confidence.
+
+This aligns the benchmark with truthful behavior and reduces incentives to bluff.
+
 
 ## Current state
 
@@ -92,7 +91,6 @@ Eval + reporting:
  - summary table columns for Unknown count and AvgScore; per-run meta.json records scoring parameters.
  - Backwards compatible: is_correct is still logged for downstream tools that expect it.
 
----
 
 ## How to use
 
