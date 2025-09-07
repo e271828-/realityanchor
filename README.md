@@ -52,7 +52,7 @@ Each item receives a scalar score:
   - unknown = +unknown_credit (default 0.25)
   - incorrect = −wrong_penalty (default 1.0)
 
-Confidence-target mode: set --risk-threshold t in [0,1). The harness applies wrong_penalty = t/(1−t), mirroring the paper's suggested scheme where abstaining is optimal unless the model's confidence exceeds t.
+Confidence-target mode: set --risk-threshold t in [0,1). The harness applies wrong_penalty = t/(1−t), mirroring the suggested scheme of Kalai et al (2025) where abstaining is optimal unless the model's confidence exceeds t.
 
 The overall report includes both traditional accuracy and the Kalai-style average score, so you can see how models trade off guessing vs. truthfulness.
 
